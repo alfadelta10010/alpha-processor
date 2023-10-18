@@ -1,7 +1,7 @@
-module adder(a, b, cin, s, cout);
-	input logic [4:0] a;
-	input logic [4:0] b;
-	output logic [4:0] s;
+module adder#(parameter N = 32)(a, b, cin, s, cout);
+	input logic [N-1:0] a;
+	input logic [N-1:0] b;
+	output logic [N-1:0] s;
 	input logic cin;
 	output logic cout;
 	{cout, sum} = a + b + cin;
