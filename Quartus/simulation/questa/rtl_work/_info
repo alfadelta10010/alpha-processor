@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s99 nomlopt
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -9,56 +10,65 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/alphadelta1803/Desktop/projects/lab_processor/Quartus/simulation/questa
-vmux21
-Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-DXx4 work 13 mux21_sv_unit 0 22 12G0JOV_IKE1dhbO;=UiD0
-Z2 !s110 1697102887
-VDg1SIo80bB@j0V0VzS_@n1
-r1
-!s85 0
+T_opt
+!s110 1697534801
+VzhQVI=ReUhV82VmiHM@dZ3
+04 10 4 work tb_InstMem fast 0
+=1-000ae431a4f1-652e5351-9b1b-35f1
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vInstMem
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1697534800
 !i10b 1
-!s100 JH7k0:0mNAFdUgckZJTYB3
-I_m@lNh?R_ad^K>mO:N;_c0
-!s105 mux21_sv_unit
+!s100 bOIgFT7PoL`]Me85AE88l3
+IVMlZfYzi8@U?PO:m87XNY2
 S1
 R0
-Z3 w1697102593
-Z4 8/home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv
-Z5 F/home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv
+w1697534756
+8/home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv
+F/home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv
 !i122 0
-L0 2 6
-Z6 OL;L;2021.2;73
-31
-Z7 !s108 1697102887.000000
-!s107 /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv|
-Z8 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/alphadelta1803/Desktop/projects/lab_processor/src|/home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv|
-!i113 0
-Z9 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z10 !s92 -sv -work work +incdir+/home/alphadelta1803/Desktop/projects/lab_processor/src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z11 tCvgOpt 0
-Xmux21_sv_unit
-R1
-R2
-V12G0JOV_IKE1dhbO;=UiD0
+L0 1 18
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
 r1
 !s85 0
+31
+Z6 !s108 1697534800.000000
+!s107 /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/alphadelta1803/Desktop/projects/lab_processor/src|/home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv|
+!i113 0
+Z7 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work +incdir+/home/alphadelta1803/Desktop/projects/lab_processor/src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@inst@mem
+vtb_InstMem
+R2
+R3
 !i10b 1
-!s100 @530FEYQ[ViEFPb>:>XOH3
-I12G0JOV_IKE1dhbO;=UiD0
-!i103 1
+!s100 0RHBC@lcea4Yc<n>H>S?Z2
+I>MYY[U;lkIPzSZAa0CA281
 S1
 R0
-R3
+w1697533615
+8/home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src/tb_InstMem.sv
+F/home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src/tb_InstMem.sv
+!i122 1
+L0 1 31
 R4
 R5
-!i122 0
-L0 1 0
-R6
+r1
+!s85 0
 31
-R7
-Z12 !s107 /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv|
-R8
+R6
+!s107 /home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src/tb_InstMem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src|/home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src/tb_InstMem.sv|
 !i113 0
-R9
-R10
-R11
+R7
+!s92 -sv -work work +incdir+/home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+ntb_@inst@mem

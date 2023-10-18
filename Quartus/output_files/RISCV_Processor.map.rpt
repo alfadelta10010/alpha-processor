@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISCV_Processor
-Thu Oct 12 14:59:01 2023
+Tue Oct 17 14:56:13 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -17,6 +17,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   9. Post-Synthesis Netlist Statistics for Top Partition
  10. Elapsed Time Per Partition
  11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,16 +44,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 12 14:59:01 2023          ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 17 14:56:13 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; RISCV_Processor                                ;
-; Top-level Entity Name              ; mux21                                          ;
+; Top-level Entity Name              ; InstMem                                        ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 1                                              ;
-;     Total combinational functions  ; 1                                              ;
+; Total logic elements               ; 54                                             ;
+;     Total combinational functions  ; 54                                             ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
-; Total pins                         ; 66                                             ;
+; Total pins                         ; 37                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -68,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M08DAF484I7G     ;                    ;
-; Top-level entity name                                            ; mux21              ; RISCV_Processor    ;
+; Top-level entity name                                            ; InstMem            ; RISCV_Processor    ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -164,45 +165,45 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; ../src/mux21.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; ../src/InstMem.sv                ; yes             ; User SystemVerilog HDL File  ; /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1     ;
-;                                             ;       ;
-; Total combinational functions               ; 1     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 1     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 66    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; y~0   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 70    ;
-; Average fan-out                             ; 0.53  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 54            ;
+;                                             ;               ;
+; Total combinational functions               ; 54            ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 31            ;
+;     -- 3 input functions                    ; 3             ;
+;     -- <=2 input functions                  ; 20            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 54            ;
+;     -- arithmetic mode                      ; 0             ;
+;                                             ;               ;
+; Total registers                             ; 0             ;
+;     -- Dedicated logic registers            ; 0             ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 37            ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; addr[1]~input ;
+; Maximum fan-out                             ; 31            ;
+; Total fan-out                               ; 238           ;
+; Average fan-out                             ; 1.86          ;
++---------------------------------------------+---------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,7 +211,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |mux21                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 66   ; 0            ; 0          ; |mux21              ; mux21       ; work         ;
+; |InstMem                   ; 54 (54)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; 0          ; |InstMem            ; InstMem     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -235,13 +236,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 66                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         3 data inputs ; 1                           ;
+; boundary_port         ; 37                          ;
+; cycloneiii_lcell_comb ; 59                          ;
+;     normal            ; 59                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 31                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.25                        ;
 +-----------------------+-----------------------------+
 
 
@@ -250,7 +255,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -260,93 +265,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Thu Oct 12 14:58:42 2023
+    Info: Processing started: Tue Oct 17 14:56:03 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISCV_Processor -c RISCV_Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 0 design units, including 0 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/top_IF.sv
-Info (12021): Found 0 design units, including 0 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/pc.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/tb_InstMem.sv
+    Info (12023): Found entity 1: tb_InstMem File: /home/alphadelta1803/Desktop/projects/lab_processor/src/tb_InstMem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv
+    Info (12023): Found entity 1: InstMem File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/top_IF.sv
+    Info (12023): Found entity 1: top_IF File: /home/alphadelta1803/Desktop/projects/lab_processor/src/top_IF.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/pc.sv
+    Info (12023): Found entity 1: pc File: /home/alphadelta1803/Desktop/projects/lab_processor/src/pc.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv
-    Info (12023): Found entity 1: mux21 File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 2
+    Info (12023): Found entity 1: mux21 File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/CLA_4Bit.sv
     Info (12023): Found entity 1: CLA_4Bit File: /home/alphadelta1803/Desktop/projects/lab_processor/src/CLA_4Bit.sv Line: 7
-Info (12021): Found 0 design units, including 0 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/adder.sv
-Info (12127): Elaborating entity "mux21" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at mux21.sv(6): truncated value with size 32 to match size of target (1) File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /home/alphadelta1803/Desktop/projects/lab_processor/src/adder.sv
+    Info (12023): Found entity 1: adder File: /home/alphadelta1803/Desktop/projects/lab_processor/src/adder.sv Line: 1
+Info (12127): Elaborating entity "InstMem" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "mem[31..20]" at InstMem.sv(11) File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 11
+Warning (10873): Using initial value X (don't care) for net "mem[15..12]" at InstMem.sv(11) File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 11
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dout[6]" is stuck at GND File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 3
+    Warning (13410): Pin "dout[14]" is stuck at GND File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 3
+    Warning (13410): Pin "dout[22]" is stuck at GND File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 3
+    Warning (13410): Pin "dout[30]" is stuck at GND File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 3
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file /home/alphadelta1803/Desktop/projects/lab_processor/Quartus/output_files/RISCV_Processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 62 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "a[1]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[2]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[3]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[4]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[5]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[6]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[7]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[8]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[9]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[10]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[11]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[12]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[13]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[14]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[15]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[16]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[17]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[18]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[19]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[20]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[21]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[22]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[23]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[24]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[25]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[26]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[27]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[28]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[29]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[30]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "a[31]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[1]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[2]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[3]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[4]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[5]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[6]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[7]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[8]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[9]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[10]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[11]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[12]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[13]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[14]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[15]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[16]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[17]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[18]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[19]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[20]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[21]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[22]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[23]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[24]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[25]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[26]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[27]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[28]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[29]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[30]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-    Warning (15610): No output dependent on input pin "b[31]" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/mux21.sv Line: 3
-Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 65 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 378 megabytes
-    Info: Processing ended: Thu Oct 12 14:59:01 2023
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:47
+Info (21057): Implemented 91 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 54 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 387 megabytes
+    Info: Processing ended: Tue Oct 17 14:56:13 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:25
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/alphadelta1803/Desktop/projects/lab_processor/Quartus/output_files/RISCV_Processor.map.smsg.
 
 

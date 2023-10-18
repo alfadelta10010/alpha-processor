@@ -4,19 +4,135 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "y",
+					"name" : "dout[0]",
 					"strict" : false
 				},
 				{
-					"name" : "a[0]",
+					"name" : "dout[1]",
 					"strict" : false
 				},
 				{
-					"name" : "b[0]",
+					"name" : "dout[2]",
 					"strict" : false
 				},
 				{
-					"name" : "s",
+					"name" : "dout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[16]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[17]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[18]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[19]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[20]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[21]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[23]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[24]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[25]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[26]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[27]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[28]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[29]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[31]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[3]",
 					"strict" : false
 				}
 			]

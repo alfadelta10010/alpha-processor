@@ -18,5 +18,6 @@ Sim dir               :  simulation/questa
 
 Info: Starting NativeLink simulation with Questa Intel FPGA software
 Sourced NativeLink script /usr/local/tools/intelFPGA_lite/22.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File RISCV_Processor_run_msim_rtl_verilog.do already exists - backing up current file as RISCV_Processor_run_msim_rtl_verilog.do.bak11
 Info: Spawning Questa Intel FPGA Simulation software 
 Info: NativeLink simulation flow was successful

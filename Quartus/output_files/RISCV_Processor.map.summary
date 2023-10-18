@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Oct 12 14:59:01 2023
+Analysis & Synthesis Status : Successful - Tue Oct 17 14:56:13 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : RISCV_Processor
-Top-level Entity Name : mux21
+Top-level Entity Name : InstMem
 Family : MAX 10
-Total logic elements : 1
-    Total combinational functions : 1
+Total logic elements : 54
+    Total combinational functions : 54
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 66
+Total pins : 37
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
