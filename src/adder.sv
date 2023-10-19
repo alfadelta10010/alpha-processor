@@ -4,5 +4,5 @@ module adder#(parameter N = 32)(a, b, cin, s, cout);
 	output logic [N-1:0] s;
 	input logic cin;
 	output logic cout;
-	{cout, sum} = a + b + cin;
+	{cout, s} = a + b + cin;
 endmodule
