@@ -1,5 +1,5 @@
 module tb_InstMem;
-	reg [4:0] tb_addr;
+	reg [31:0] tb_addr;
 	wire [31:0] tb_dout;
 	InstMem dut(.addr(tb_addr), .dout(tb_dout));
 	initial begin
@@ -27,6 +27,24 @@ module tb_InstMem;
 		tb_addr = 28; //5'b11100; 
 		#10;
 		$display("[tb] Address = %0b: Data = %0h", tb_addr, tb_dout);	
+		tb_addr = 32;  //5'b100000
+		#10;
+		$display("[tb] Address = %0b: Data = %0h", tb_addr, tb_dout);	
+		tb_addr = 36;   
+		#10;
+		$display("[tb] Address = %0b: Data = %0h", tb_addr, tb_dout);	
+		tb_addr = 40;   
+		#10;
+		$display("[tb] Address = %0b: Data = %0h", tb_addr, tb_dout);	
+		tb_addr = 44;   
+		#10;
+		$display("[tb] Address = %0b: Data = %0h", tb_addr, tb_dout);	
+		tb_addr = 48;   
+		#10;
+		$display("[tb] Address = %0b: Data = %0h", tb_addr, tb_dout);	
+		tb_addr = 52;
+		#10;
+		$display("[tb] Address = %0b: Data = %0h", tb_addr, tb_dout);
 	end
 endmodule
 
