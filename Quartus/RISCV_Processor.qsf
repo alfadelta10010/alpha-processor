@@ -54,13 +54,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/tb_InstMem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/InstMem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/top_IF.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/pc.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/mux21.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/CLA_4Bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../src/adder.sv
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -73,3 +66,10 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_InstMem
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_InstMem -section_id tb_InstMem
 set_global_assignment -name EDA_TEST_BENCH_FILE ../src/tb_InstMem.sv -section_id tb_InstMem
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/tb_InstMem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/InstMem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/top_IF.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/pc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/mux21.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/CLA_4Bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/adder.sv
