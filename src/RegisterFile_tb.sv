@@ -7,6 +7,7 @@ module RegisterFile_tb(clk_tb, wen_tb, rd_tb, rs1_tb, rs2_tb, din_tb, r1_tb, r2_
 	input logic [31:0] r1_tb;
 	input logic [31:0] r2_tb;
 	
+	///*
 	RegisterFile regs (.clk(clk_tb), 
 					   .wen(wen_tb), 
 					   .rd(rd_tb), 
@@ -23,7 +24,7 @@ module RegisterFile_tb(clk_tb, wen_tb, rd_tb, rs1_tb, rs2_tb, din_tb, r1_tb, r2_
 			clk_tb = 1;
 			#5;
 		end
-	
+	//*/
 	initial begin
 		$dumpfile("dump.vcd");
 		$dumpvars(0, RegisterFile_tb);
