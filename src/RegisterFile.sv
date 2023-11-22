@@ -1,4 +1,4 @@
-module RegisterFile(clk, wen, rd, rs1, rs2, r1, r2);
+module RegisterFile(clk, wen, rd, rs1, rs2, r1, r2, din);
 	input logic clk, wen;
 	input logic [4:0] rd;
 	input logic [4:0] rs1;
@@ -12,12 +12,6 @@ module RegisterFile(clk, wen, rd, rs1, rs2, r1, r2);
 	always @(posedge clk)
 		if (wen) 
 			regs[rd[4:0]] <= din;
-	if (r1 != 5'bX)
-		assign r1 = regs[rs1[4:0]];
-	else
-		assign r1 = regs[0];
-	if (r2 != 5'bX)
-		assign r2 = regs[rs2[4:0]];
-	else
-		assign r2 = regs[0];
+    assign r1 = regs[rs1[4:0]];
+	assign r2 = regs[rs2[4:0]];
 endmodule
