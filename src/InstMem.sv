@@ -1,9 +1,8 @@
-module InstMem#(parameter XLEN = 32)(addr, dout);
-	input logic [XLEN - 1 : 0] addr;
-	output logic [31:0] dout;
-	logic [7:0] mem [2**XLEN - 1 : 0];
-	/*
-	logic [7:0] mem [31:0] = '{8'bX, 8'bX, 8'bX, 8'bX,
+module InstMem#(parameter XLEN = 5)(pcin, dout);
+	input logic [31:0] pcin;
+	logic [XLEN - 1 : 0] addr;
+	output logic [31:0] dout;	
+	logic [7:0] mem [2**XLEN-1 : 0] = '{8'bX, 8'bX, 8'bX, 8'bX,
 				   8'bX, 8'bX, 8'bX, 8'bX,
 				   8'bX, 8'bX, 8'bX, 8'bX,
 				   8'hX, 8'hX, 8'hX, 8'hX,
@@ -11,6 +10,7 @@ module InstMem#(parameter XLEN = 32)(addr, dout);
 				   8'h00, 8'h84, 8'h89, 8'h33,
 				   8'h10, 8'h10, 8'h04, 8'h93,
 				   8'h01, 8'h00, 8'h04, 8'h13};
+	assign addr = pcin[XLEN-1:0];
 	//mem[0] = 8'h13;
 	//mem[1] = 8'h04;
 	//mem[2] = 8'h00;
@@ -26,10 +26,13 @@ module InstMem#(parameter XLEN = 32)(addr, dout);
 	//mem[13] = 8'h00;
 	//mem[14] = 8'h00;
 	//mem[15] = 8'h00;
-	//mem[16] = 8'h00;	
-    0:        01000413        00000001000000000000010000010011
-    4:        10100493        00010000000100000000010010010011
-    8:        00848933        00000000100001001000100100110011
+	//mem[16] = 8'h00;
+	/*
+									imm	   rs1   f3   rd    op
+    0:        01000413        000000010000 00000 000 01000 0010011 (I)
+    4:        10100493        000100000001 00000 000 01001 0010011 (I)
+    8:        00848933        0000000 01000 01001 000 10010 0110011 (R)
+	                              f7    rs2
 	*/
 	assign dout = {mem [addr+3], mem [addr+2], mem [addr+1], mem [addr]};
 endmodule
