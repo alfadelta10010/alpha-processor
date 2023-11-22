@@ -25,49 +25,32 @@
 # 
 # vlog -sv -work work +incdir+/home/alphadelta1803/Desktop/projects/lab_processor/src {/home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:56:40 on Oct 17,2023
+# Start time: 22:57:56 on Nov 18,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/alphadelta1803/Desktop/projects/lab_processor/src" /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv 
 # -- Compiling module InstMem
 # 
 # Top level modules:
 # 	InstMem
-# End time: 14:56:40 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 22:57:57 on Nov 18,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+/home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src {/home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src/tb_InstMem.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:56:40 on Oct 17,2023
+# Start time: 22:57:57 on Nov 18,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src" /home/alphadelta1803/Desktop/projects/lab_processor/Quartus/../src/tb_InstMem.sv 
 # -- Compiling module tb_InstMem
 # 
 # Top level modules:
 # 	tb_InstMem
-# End time: 14:56:40 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 22:57:57 on Nov 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  tb_InstMem
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" tb_InstMem 
-# Start time: 14:56:40 on Oct 17,2023
+# Start time: 22:57:57 on Nov 18,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
 # Loading work.tb_InstMem(fast)
 # Loading work.InstMem(fast)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# [tb] Address = 0: Data = 1000413
-# [tb] Address = 100: Data = 10100493
-# [tb] Address = 1000: Data = 12489b3
-# [tb] Address = 1100: Data = x
-# [tb] Address = 10000: Data = 0
-# [tb] Address = 10100: Data = x
-# [tb] Address = 11000: Data = x
-# [tb] Address = 11100: Data = x
-# 
-# stdin: <EOF>
-# End time: 15:06:32 on Oct 17,2023, Elapsed time: 0:09:52
+# End time: 22:58:00 on Nov 18,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
