@@ -1,13 +1,4 @@
-/*
-Instruction
-─────────┐
- [31:0]  │
-      ┌──▼──┐
-Opcode│     │[31:0]
-──────► Ext ├──────►Immediate
- [6:0]│     │        Value
-      └─────┘
-*/
+//https://edaplayground.com/x/scsg
 module SignExtender_tb(opcode_tb, instIn_tb, immOut_tb);
 	output logic [6:0] opcode_tb;
 	output logic [31:0] instIn_tb;
@@ -28,11 +19,11 @@ module SignExtender_tb(opcode_tb, instIn_tb, immOut_tb);
 		#5 opcode_tb = 7'b1100011; //B-type
 		#5 instIn_tb = 32'h014c6463; //0000002c
 		#6 opcode_tb = 7'b1100111; //JALR
-		#6 instIn_tb = 32'h372080e7;
+		#6 instIn_tb = 32'h7ff080e7; // 0x7FF
 		#7 opcode_tb = 7'b1101111; //JAL
 		#7 instIn_tb = 32'h0000006f; //0000007c
 		#8 opcode_tb = 7'b0110111; //LUI
-		#8 instIn_tb = 32'h34487237;
+		#8 instIn_tb = 32'h872370b7; //0x87237
 		#9 opcode_tb = 7'b0010111; //AUIPC
 		#9 instIn_tb = 32'h10000917; //0x10000
 		#10 $finish;
