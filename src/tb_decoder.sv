@@ -22,10 +22,15 @@ module decoder_tb(instIn_tb, opcode_tb, rd_tb, rs1_tb, rs2_tb, instOut_tb, fn3_t
 	initial begin
 		$dumpfile("dump.vcd");
 		$dumpvars(0, decoder_tb);
-		instIn_tb = 32'h00848933;
-		#1 instIn_tb = 32'h10100493;
-		#1.5 instIn_tb = 32'h01000413;
-		// add more instructions here
-		#5 $finish;
+		#1 instIn_tb = 32'h00848933;
+		#2 instIn_tb = 32'h10100493;
+		#3 instIn_tb = 32'h0082a223;
+		#4 instIn_tb = 32'h0002a303;
+		#5 instIn_tb = 32'h014c6463;
+		#6 instIn_tb = 32'h7ff080e7;
+		#7 instIn_tb = 32'h0000006f;
+		#8 instIn_tb = 32'h872370b7;
+		#9 instIn_tb = 32'h10000917;
+		#10 $finish;
 	end
 endmodule
