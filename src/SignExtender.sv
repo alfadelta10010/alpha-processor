@@ -14,7 +14,11 @@ module SignExtender(opcode, instIn, immOut);
 	output logic [31:0] immOut;
 	always_comb
 		case(opcode)
-			7'b011011, 7'b001011: begin //LUI AUIPC
+			7'b0110111: begin //LUI 
+				immOut[31:12] = instIn[31:12];
+				immOut[11:0] = 12'b0;
+			end
+			7'b0010111: begin //AUIPC
 				immOut[31:12] = instIn[31:12];
 				immOut[11:0] = 12'b0;
 			end
