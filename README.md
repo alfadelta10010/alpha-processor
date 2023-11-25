@@ -1,16 +1,15 @@
 # RISCV-Processor
-Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Architecture) by Team 1
+Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Architecture)
 
 =======
 ## Checklist
 
 | Module | Completed | Verified |
 | :----: | :-: | :-: |
-| [Program Counter](src/pc.sv) | Y | N |
-| [Adder](src/adder.sv) | Y | [Y](src/tb_adder) |
+| [Program Counter](src/pc.sv) | Y | [Y](src/tb_pc.sv) |
+| [Adder](src/adder.sv) | Y | [Y](src/tb_adder.sv) |
 | [InstMem](src/InstMem.sv) | Y | [Y](src/tb_InstMem.sv)|
-| [2:1 MUX](
-src/mux21.sv) | Y | N |
+| [2:1 MUX](src/mux21.sv) | Y | N* |
 | [Inst. Fetch](src/IF.sv) | Y | [Y](src/tb_IF.sv) |
 | [Decoder](src/decoder.sv) | Y | [Y](src/tb_decoder.sv) | 
 | [Register File](src/RegisterFile.sv) | Y | [Y](src/tb_RegisterFile.sv) |
