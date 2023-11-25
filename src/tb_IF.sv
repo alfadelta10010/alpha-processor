@@ -1,39 +1,35 @@
-/*           ┌─────────────────►BranchSel
-          ┌──┴──────────┐
-          │  Testbench  ├──────►BranchInp
-          │ Instruction◄────────PCPresent
-Reset◄───┤    Fetch   ◄────────Instruction
-  Clk─────►            │        Out
-          └─────────────┘
-*/
-module tb_IF; //(clk, tb_branch_sel, tb_branch_inp, tb_pc_present, tb_inst);
-	logic tb_branch_sel;
-	bit clk;
-	bit reset;
-	logic [31:0] tb_branch_inp;
-	logic [31:0] tb_pc_present;
-	logic [31:0] tb_inst;
-	IF mod(.clk(clk), .reset(tb_reset), .branch_sel(tb_branch_sel), .branch_inp(tb_branch_inp), .pc_present(tb_pc_present), .inst(tb_inst));
+// https://edaplayground.com/x/r3zg
+module tb_IF(clk_tb, branch_sel_tb, branch_inp_tb, pc_present_tb, inst_tb);
+	logic branch_sel_tb;
+	bit clk_tb;
+	bit reset_tb;
+	logic [31:0] branch_inp_tb;
+	logic [31:0] pc_present_tb;
+	logic [31:0] inst_tb;
+	
+	IF dut(.clk(clk_tb), .reset(reset_tb), .branch_sel(branch_sel_tb), .branch_inp(branch_inp_tb), .pc_present(pc_present_tb), .inst(inst_tb));
+	
+	always
+		begin
+			clk_tb = 0;
+			#5;
+			clk_tb = 1;
+			#5;
+		end
+	
 	initial
 		begin
-			tb_branch_sel <= 0;
-			tb_branch_inp <= 0;
-          	$display("Instruction %0h at PC = %0h", tb_inst, tb_pc_present);
-			#10 $display("Instruction %0h at PC = %0h", tb_inst, tb_pc_present);
-			#20 $display("Instruction %0h at PC = %0h", tb_inst, tb_pc_present);
-			#30 $display("Instruction %0h at PC = %0h", tb_inst, tb_pc_present);
-			#40 $display("Instruction %0h at PC = %0h", tb_inst, tb_pc_present);
-			#50 $display("Instruction %0h at PC = %0h", tb_inst, tb_pc_present);
-			#60 $display("Instruction %0h at PC = %0h", tb_inst, tb_pc_present);
-			
-			if (tb_pc_present == 32)
+			$dumpfile("dump.vcd");
+			$dumpvars(0, tb_IF);
+			reset_tb <= 1;
+			branch_sel_tb <= 0;
+			branch_inp_tb <= 0;
+			#1 reset_tb <= 0;
+			if (pc_present_tb == 32)
 				begin
-					tb_branch_sel <= 1;
-					tb_branch_inp <= 40;
-                  	$display("Branch: Incrememted by 40");
-          			$display("Instruction %0h at PC = %0h", tb_inst, tb_pc_present);
+					branch_sel_tb <= 1;
+					branch_inp_tb <= 40;
 				end
 		end
-	always #5 clk = !clk;
 endmodule
 					
