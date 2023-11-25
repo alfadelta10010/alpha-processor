@@ -1,6 +1,6 @@
 //https://edaplayground.com/x/uuSe
 
-module RegisterFile_tb(clk_tb, wen_tb, rd_tb, rs1_tb, rs2_tb, din_tb, r1_tb, r2_tb);
+module tb_RegisterFile(clk_tb, wen_tb, rd_tb, rs1_tb, rs2_tb, din_tb, r1_tb, r2_tb);
 	output logic clk_tb, wen_tb;
 	output logic [4:0] rd_tb;
 	output logic [4:0] rs1_tb;
@@ -29,7 +29,7 @@ module RegisterFile_tb(clk_tb, wen_tb, rd_tb, rs1_tb, rs2_tb, din_tb, r1_tb, r2_
 	//*/
 	initial begin
 		$dumpfile("dump.vcd");
-		$dumpvars(0, RegisterFile_tb);
+		$dumpvars(0, tb_RegisterFile);
 		rd_tb = 5'b01010;
 		din_tb = 32'hBABEFACE;
 		#3 wen_tb = 1;
