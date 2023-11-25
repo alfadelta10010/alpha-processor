@@ -34,7 +34,23 @@ instIn  │  C  ├──────────►
 			opcode = instIn[6:0];
 			instOut = instIn;
 			case(opcode)
-				7'b0110111, 7'b1101111, 7'b0010111: //LUI, JAL, AUIPC
+				7'b0110111: //LUI
+					begin
+						rd = instIn[11:7];
+						rs1 = 5'bX;
+						rs2 = 5'bX;
+						fn3 = 3'bX;
+						fn7 = 7'bX;
+					end
+				7'b0010111: //JAL
+					begin
+						rd = instIn[11:7];
+						rs1 = 5'bX;
+						rs2 = 5'bX;
+						fn3 = 3'bX;
+						fn7 = 7'bX;
+					end
+				7'b0010111: //AUIPC
 					begin
 						rd = instIn[11:7];
 						rs1 = 5'bX;
