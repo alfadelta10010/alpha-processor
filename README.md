@@ -5,7 +5,7 @@ Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Arc
 ## Checklist
 
 | Module | Completed | Verified |
-| :----: | :-: | :-: |
+| :------: | :-: | :-: |
 | [Program Counter](src/pc.sv) | Y | [Y](src/tb_pc.sv) |
 | [Adder](src/adder.sv) | Y | [Y](src/tb_adder.sv) |
 | [InstMem](src/InstMem.sv) | Y | [Y](src/tb_InstMem.sv)|
@@ -18,7 +18,7 @@ Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Arc
 | [ALU](src/ALU.sv) | Y | [Y](src/tb_ALU.sv) |
 | [Branch Control](src/branch_control.sv) | Y | [Y](src/tb_branch_control.sv) |
 | [Inst. Execute](src/IE.sv) | Y | [Y](src/tb_IE.sv) |
-| [4:1 MUX](src/mux41.sv) | N | N |
+| [3:1 MUX](src/mux31.sv) | Y | [Y](src/tb_mux31.sv) |
 | [Data Memory](src/DataMem.sv) | Y | [Y](src/tb_DataMem.sv) |
 | [Control Unit](src/controller.sv) | N | N |
 | [Branch Detector](src/branch.sv) | N | N |
