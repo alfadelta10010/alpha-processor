@@ -4,12 +4,12 @@ Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Arc
 =======
 ## Checklist
 
-| Module | Completed | Verified | EDA Link |
+| Module | Completed | Verified | EDA Playground Link |
 | :------: | :-: | :-: | :----: |
 | [Program Counter](src/pc.sv) | Y | [Y](src/tb_pc.sv) | [Link](https://edaplayground.com/x/WcD9) |
 | [Adder](src/adder.sv) | Y | [Y](src/tb_adder.sv) | [Link](https://edaplayground.com/x/gt_U) |
 | [InstMem](src/InstMem.sv) | Y | [Y](src/tb_InstMem.sv)| [Link](https://edaplayground.com/x/GLpz) |
-| [2:1 MUX](src/mux21.sv) | Y | [N](src/tb_mux21.sv) | [Link](https://edaplayground.com/x/p8Cz) |
+| [2:1 MUX](src/mux21.sv) | Y | [Y](src/tb_mux21.sv) | [Link](https://edaplayground.com/x/p8Cz) |
 | [Inst. Fetch](src/IF.sv) | Y | [Y](src/tb_IF.sv) | [Link](https://edaplayground.com/x/r3zg) |
 | [Decoder](src/decoder.sv) | Y | [Y](src/tb_decoder.sv) |  [Link](https://edaplayground.com/x/Nas8) |
 | [Register File](src/RegisterFile.sv) | Y | [Y](src/tb_RegisterFile.sv) | [Link](https://edaplayground.com/x/uuSe) |
