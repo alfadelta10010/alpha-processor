@@ -1,7 +1,7 @@
 module tb_InstMem;
 	reg [31:0] tb_addr;
 	wire [31:0] tb_dout;
-	InstMem dut(.addr(tb_addr), .dout(tb_dout));
+	InstMem dut(.pcin(tb_addr), .dout(tb_dout));
 	initial begin
 		tb_addr = 0;   //5'b00000; 
 		#10;
