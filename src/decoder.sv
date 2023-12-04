@@ -1,4 +1,3 @@
-module decoder(instIn, opcode, rd, rs1, rs2, instOut, fn3, fn7);
 /*      
         ┌─────┐
 		│	  │rd[4:0]
@@ -21,6 +20,8 @@ instIn  │  C  ├──────────►
         ▼ ▼
         F3  F7
 */
+
+module decoder(instIn, opcode, rd, rs1, rs2, instOut, fn3, fn7);
 	input logic [31:0] instIn;
 	output logic [4:0] rd;
 	output logic [4:0] rs1;

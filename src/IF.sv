@@ -11,7 +11,7 @@ module IF #(parameter XLEN = 32)(clk, reset, branch_sel, branch_inp, pc_present,
 	input logic branch_sel;
 	input bit clk;
 	input bit reset;
-	input logic [31:0]branch_inp;
+	input logic [31:0] branch_inp;
 	output logic [31:0] pc_present;
 	output logic [31:0] inst;
 	const bit [31:0] offset = 4;
