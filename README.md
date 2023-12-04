@@ -9,7 +9,7 @@ Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Arc
 | [Program Counter](src/pc.sv) | Y | [Y](src/tb_pc.sv) |
 | [Adder](src/adder.sv) | Y | [Y](src/tb_adder.sv) |
 | [InstMem](src/InstMem.sv) | Y | [Y](src/tb_InstMem.sv)|
-| [2:1 MUX](src/mux21.sv) | Y | N* |
+| [2:1 MUX](src/mux21.sv) | Y | [N](src/tb_mux21.sv) |
 | [Inst. Fetch](src/IF.sv) | Y | [Y](src/tb_IF.sv) |
 | [Decoder](src/decoder.sv) | Y | [Y](src/tb_decoder.sv) | 
 | [Register File](src/RegisterFile.sv) | Y | [Y](src/tb_RegisterFile.sv) |
