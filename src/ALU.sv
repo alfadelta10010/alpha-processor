@@ -20,9 +20,9 @@ module ALU(d1, d2, result, zero, control);
 			4'b1010: result = d1 ^ d2; //XOR
 			default: result = 32'bX;
 		endcase
-		if (result == 32'b0)
+		/*if (result == 32'b0)
 			zero = 1'b1;
 		else
-			zero = 1'b0;
+			zero = 1'b0;*/
 	end
 endmodule
