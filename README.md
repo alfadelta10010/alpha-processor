@@ -14,11 +14,12 @@ Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Arc
 | [Decoder](src/decoder.sv) | Y | [Y](src/tb_decoder.sv) |  [Link](https://edaplayground.com/x/Nas8) |
 | [Register File](src/RegisterFile.sv) | Y | [Y](src/tb_RegisterFile.sv) | [Link](https://edaplayground.com/x/uuSe) |
 | [Sign Extender](src/SignExtender.sv) | Y | [Y](src/tb_SignExtender.sv) | [Link](https://edaplayground.com/x/scsg) |
-| [Inst. Decode](src/ID.sv) | Y | [Y*](src/tb_ID.sv) | [Link*](https://edaplayground.com/x/Xwvw) |
+| [Inst. Decode](src/ID.sv) | Y | [Y](src/tb_ID.sv) | [Link](https://edaplayground.com/x/Xwvw) |
 | [ALU](src/ALU.sv) | Y | [Y](src/tb_ALU.sv) | [Link](https://edaplayground.com/x/UEmr) |
 | [Branch Control](src/branch_control.sv) | Y | [Y](src/tb_branch_control.sv) | [Link](https://edaplayground.com/x/AxsV) |
 | [Inst. Execute](src/IE.sv) | Y | [Y](src/tb_IE.sv) | [Link](https://edaplayground.com/x/CnWQ) |
 | [3:1 MUX](src/mux31.sv) | Y | [Y](src/tb_mux31.sv) | [Link](https://edaplayground.com/x/naRb) |
 | [Data Memory](src/DataMem.sv) | Y | [Y](src/tb_DataMem.sv) | [Link](https://edaplayground.com/x/Nm7W) |
-| [Control Unit](src/controller.sv) | N | N | [Link]() |
+| [Control Unit](src/controller.sv) | N | N | [Link](src/tb_controller.sv) |
+| [Datapath](src/datapath.sv) | Y | N | [Link]() |
 
