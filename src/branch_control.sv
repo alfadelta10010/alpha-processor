@@ -6,42 +6,43 @@ module branch_control(b_control, r1, r2, branch_sel);
 	always_comb
 		begin
 			case(b_control)
-				3'b001: begin // BEQ
+				3'b000: begin // BEQ
 					if (r1 == r2)
 						branch_sel = 1'b1;
 					else
 						branch_sel = 1'b0;
 				end
-				3'b010: begin // BNE
+				3'b001: begin // BNE
 					if (r1 != r2)
 						branch_sel = 1'b1;
 					else
 						branch_sel = 1'b0;
 				end
-				3'b011: begin // BLT
+				3'b100: begin // BLT
 					if ($signed(r1) < $signed(r2))
 						branch_sel = 1'b1;
 					else
 						branch_sel = 1'b0;
 				end
-				3'b111: begin // BLTU
+				3'b110: begin // BLTU
 					if (r1 < r2)
 						branch_sel = 1'b1;
 					else
 						branch_sel = 1'b0;
 				end
-				3'b100: begin // BGE
+				3'b101: begin // BGE
 					if ($signed(r1) >= $signed(r2))
 						branch_sel = 1'b1;
 					else
 						branch_sel = 1'b0;
 				end
-				3'b101: begin // BGEU
+				3'b111: begin // BGEU
 					if (r1 >= r2)
 						branch_sel = 1'b1;
 					else
 						branch_sel = 1'b0;
 				end
+				//3'b011: N/A
 				default: begin 
 					branch_sel = 1'b0;
 				end
