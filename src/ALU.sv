@@ -8,16 +8,20 @@ module ALU(d1, d2, result, zero, control);
 	always_comb begin
 		case(control)
 			4'b0000: result = d1 + d2; //ADD
-			4'b0001: result = d1 - d2; //SUB
+			4'b0001: result = d1 << d2[4:0]; //SLL
 			4'b0010: result = ($signed(d1) < $signed(d2)) ? 32'h00000001 : 32'h00000000; //SLT
 			4'b0011: result = (d1 < d2) ? 32'h00000001 : 32'h00000000; //SLTU
-			//4'b0100: 
-			4'b0101: result = d1 << d2[4:0]; //SLL
-			4'b0110: result = d1 >> d2[4:0]; //SRL
-			4'b0111: result = d1 >>> d2[4:0]; //SRA
-			4'b1000: result = d1 & d2; //AND
-			4'b1001: result = d1 | d2; //OR
-			4'b1010: result = d1 ^ d2; //XOR
+			4'b0100: result = d1 ^ d2; //XOR
+			4'b0101: result = d1 >> d2[4:0]; //SRL
+			4'b0110: result = d1 | d2; //OR
+			4'b0111: result = d1 & d2; //AND
+			4'b1000: result = d1 - d2; //SUB
+			//4'b1001:
+			//4'b1010:
+			//4'b1100:
+			4'b1101: result = d1 >>> d2[4:0]; //SRA
+			//4'b1110:
+			//4'b1111:
 			default: result = 32'bX;
 		endcase
 	end
