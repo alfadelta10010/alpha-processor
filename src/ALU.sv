@@ -11,7 +11,7 @@ module ALU(d1, d2, result, zero, control);
 			4'b0001: result = d1 << d2[4:0]; //SLL
 			4'b0010: begin
 				d1S = d1; d2S = d2;
-				result = (d1 < d2) ? 32'h00000001 : 32'h00000000; //SLT
+				result = (d1S < d2S) ? 32'h00000001 : 32'h00000000; //SLT
 			end
 			4'b0011: result = (d1 < d2) ? 32'h00000001 : 32'h00000000; //SLTU
 			4'b0100: result = d1 ^ d2; //XOR
