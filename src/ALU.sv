@@ -21,6 +21,7 @@ module ALU(d1, d2, result, control);
 			4'b1000: result = d1 - d2; //SUB
 			//4'b1001:
 			//4'b1010:
+			//4'b1011:
 			//4'b1100:
 			4'b1101: result = d1 >>> d2[4:0]; //SRA
 			//4'b1110:
