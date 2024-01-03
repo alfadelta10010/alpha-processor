@@ -1,4 +1,4 @@
-module ALU(d1, d2, result, zero, control);
+module ALU(d1, d2, result, control);
 	input logic [31:0] d1;
 	input logic [31:0] d2;
 	output logic [31:0] result;
