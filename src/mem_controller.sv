@@ -1,3 +1,19 @@
+/*
+memctrl┌──────────────────────────────┐
+ ──────►        mem_controller        │
+ [2:0] │   ┌──────────────────────┐   │
+       │   │                      │   │
+ addrIn│   │                      │   │dataRO
+ ──────►   │addrOut         dataRI│   ├──────►
+ [31:0]│   ├──────►         ──────►   │[31:0]
+       │   │[11:0]          [31:0]│   │ 
+ 	   │   │                      │   │
+ dataWI│   │dataWO                │   │
+ ──────►   ├──────►               │   │
+ [31:0]│   │[31:0]                │   │
+       └───┘                      └───┘
+*/
+
 module mem_controller(dataRI, dataRO, addrIn, addrOut, dataWI, dataWO, mem_ctrl);
 	parameter SIZE = 12;
 	input logic [2:0] mem_ctrl;
@@ -14,36 +30,36 @@ module mem_controller(dataRI, dataRO, addrIn, addrOut, dataWI, dataWO, mem_ctrl)
 	always_comb
 		case(mem_ctrl)
 			3'b000: begin //LB
-				if (dataWI[7] == 1'b1)
-					dataWO = {24'b1, dataWI[7:0]};
+				if (dataRI[7] == 1'b1)
+					dataRO = {24'b1, dataRI[7:0]};
 				else 
-					if (dataWI[7] == 1'b0)
-						dataWO = {24'b0, dataWI[7:0]};
+					if (dataRI[7] == 1'b0)
+						dataRO = {24'b0, dataRI[7:0]};
 			end
 			3'b001: begin //LH
-				if (dataWI[15] == 1'b1)
-					dataWO = {16'b1, dataWI[15:0]};
+				if (dataRI[15] == 1'b1)
+					dataRO = {16'b1, dataRI[15:0]};
 				else 
-					if (dataWI[7] == 1'b0)
-						dataWO = {16'b0, dataWI[15:0]};
+					if (dataRI[7] == 1'b0)
+						dataRO = {16'b0, dataWI[15:0]};
 			end
 			3'b010: begin //LW
-				dataWO = dataWI;
+				dataRO = dataRI;
 			end
 			3'b011: begin //LBU
-				dataWO = {24'b0, dataWI[7:0]};
+				dataRO = {24'b0, dataRI[7:0]};
 			end
 			3'b100: begin //LHU
-				dataWO = {16'b0, dataWI[15:0]};
+				dataRO = {16'b0, dataRI[15:0]};
 			end
 			3'b101: begin // SB
-				dataRO = {24'bX, dataRI[7:0]};
+				dataWO = {24'bX, dataWI[7:0]};
 			end
 			3'b110: begin // SH
-				dataRO = {16'bX, dataRI[15:0]};
+				dataWO = {16'bX, dataWI[15:0]};
 			end
 			3'b111: begin // SW
-				dataRO = dataRI;
+				dataWO = dataWI;
 			end
 		endcase
 endmodule
