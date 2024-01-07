@@ -22,5 +22,5 @@ Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Arc
 | [Data Memory](src/DataMem.sv) | Y | [Y](src/tb_DataMem.sv) | [Link](https://edaplayground.com/x/Nm7W) |
 | [Control Unit](src/controller.sv) | Y | [Y](src/tb_controller.sv) | [Link](https://edaplayground.com/x/P9iS) |
 | [Datapath](src/datapath.sv) | Y | N | [Link]() |
-| [Memory Controller](src/mem_controller.sv) | N | N | [Link]() |
+| [Memory Controller](src/mem_controller.sv) | Y | N | [Link]() |
 
