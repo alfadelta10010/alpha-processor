@@ -26,6 +26,6 @@ module SignExtender_tb(opcode_tb, instIn_tb, immOut_tb);
 		instIn_tb = 32'h872370b7; //0x87237
 		#1 opcode_tb = 7'b0010111; //AUIPC
 		instIn_tb = 32'h10000917; //0x10000
-		#15 $finish;
+		#1 $finish;
 	end
 endmodule

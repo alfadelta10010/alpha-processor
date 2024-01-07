@@ -24,6 +24,6 @@ module tb_branch_control(b_control_tb, r1_tb, r2_tb, branch_sel_tb);
 		#1 b_control_tb = 3'b100;
 		#1 r2_tb = 32'hFFFFFFFF;
 		#1 b_control_tb = 3'b101;
-		#10 $finish;
+		#1 $finish;
 	end
 endmodule

@@ -17,11 +17,11 @@ module tb_mux21(a_tb, b_tb, s_tb, y_tb);
 	initial begin
 		$dumpfile("dump.vcd");
 		$dumpvars(0, tb_mux21);
-		#0 a_tb = 32'habcdef12;
-		#0 b_tb = 32'h12345678;
-		#0 s_tb = 1'b0;
+		a_tb = 32'habcdef12;
+		b_tb = 32'h12345678;
+		s_tb = 1'b0;
 		#1 s_tb = 1'b1; 
-		#2 s_tb = 1'b0;
-		#10 $finish;
+		#1 s_tb = 1'b0;
+		#1 $finish;
 	end
 endmodule

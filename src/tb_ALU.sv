@@ -29,6 +29,6 @@ module tb_ALU(d1_tb, d2_tb, result_tb, control_tb);
 		#10 control_tb = 4'b1101;
 		#10 control_tb = 4'b1110;
 		#10 control_tb = 4'b1111;
-		#150 $finish;
+		#10 $finish;
 	end
 endmodule

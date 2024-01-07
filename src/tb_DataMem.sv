@@ -27,13 +27,13 @@ module tb_DataMem(addrIn_tb, dataW_tb, dataR_tb, memW_tb, memR_tb, clk_tb);
 			$dumpfile("dump.vcd");
 			$dumpvars(0, tb_DataMem);
 			#1 addrIn_tb = 32'h00000000;
-			#1 dataW_tb = 32'ha28b538c;
-			#2 memW_tb = 1'b1;
-			#4 memW_tb = 1'b0;
-			#5 memR_tb = 1'b1;
-			#6 memR_tb = 1'b0;
-			#6 addrIn_tb = 32'h00000003;
-			#7 memR_tb = 1'b1;
-			#20 $finish;
+			dataW_tb = 32'ha28b538c;
+			#1 memW_tb = 1'b1;
+			#2 memW_tb = 1'b0;
+			#1 memR_tb = 1'b1;
+			#1 memR_tb = 1'b0;
+			addrIn_tb = 32'h00000003;
+			#1 memR_tb = 1'b1;
+			#1 $finish;
 		end
 endmodule

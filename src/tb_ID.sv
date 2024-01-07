@@ -67,9 +67,9 @@ module tb_ID(data_tb, f3_tb, f7_tb, opcode_tb, WrEn_tb, Imm_tb, r1_tb, r2_tb, DI
 			$dumpvars(0, tb_ID);
 			//#1 data_tb = 32'h00848933;
 			#1 data_tb = 32'h13590913;
-			#2 WrEn_tb = 1;
-			#3 DIn_tb = 32'h0182a223;
-			#10 $finish;
+			#1 WrEn_tb = 1;
+			#1 DIn_tb = 32'h0182a223;
+			#1 $finish;
 		end
 endmodule
 

@@ -23,9 +23,9 @@ module tb_mux31(a_tb, b_tb, c_tb, s_tb, y_tb);
 		b_tb = 32'h12345678;
 		c_tb = 32'hbabeface;
 		#1 s_tb = 2'b00;
-		#2 s_tb = 2'b01;
-		#3 s_tb = 2'b10;
-		#4 s_tb = 2'b11;
-		#5 $finish;
+		#1 s_tb = 2'b01;
+		#1 s_tb = 2'b10;
+		#1 s_tb = 2'b11;
+		#1 $finish;
 	end
 endmodule

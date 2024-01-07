@@ -32,11 +32,11 @@ module tb_RegisterFile(clk_tb, wen_tb, rd_tb, rs1_tb, rs2_tb, din_tb, r1_tb, r2_
 		$dumpvars(0, tb_RegisterFile);
 		rd_tb = 5'b01010;
 		din_tb = 32'hBABEFACE;
-		#3 wen_tb = 1;
-		#5 rs1_tb = 5'b00010;
-		#5 rs2_tb = 5'b01010;
-		#10 rs2_tb = 5'bX;
-		#10 rd_tb = 5'b00010;
-		#20 $finish;
+		#2 wen_tb = 1;
+		#2 rs1_tb = 5'b00010;
+		rs2_tb = 5'b01010;
+		#5 rs2_tb = 5'bX;
+		rd_tb = 5'b00010;
+		#5 $finish;
 	end
 endmodule

@@ -21,9 +21,9 @@ module tb_pc(clk_tb, reset_tb, inp_tb, pc_out_tb);
 		reset_tb = 1;
 		#1 reset_tb = 0;
 		// testing write into PC
-		#3 inp_tb = 32'h00000010;
-		#9 inp_tb = 32'h00000004;
-		#20 $finish;
+		#2 inp_tb = 32'h00000010;
+		#6 inp_tb = 32'h00000004;
+		#1 $finish;
 	end
 endmodule
 		

@@ -55,6 +55,6 @@ module tb_IE(r1_tb, r2_tb, Imm_tb, ALUOp_tb, ALUSrc1_tb, ALUSrc2_tb, ExecResult_
 		Imm_tb = 32'h00000010;
 		PCp_tb = 32'h00000004;
 		b_control_tb = 3'b000;
-		#5 $finish;
+		#1 $finish;
 	end
 endmodule
