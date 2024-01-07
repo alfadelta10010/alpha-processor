@@ -10,7 +10,8 @@ module datapath (reset,
 				 alu_op, 
 				 alu_s1,
 				 alu_s2, 
-				 branch_ctrl
+				 branch_ctrl,
+				 mem_ctrl
 				);
 	
 	output logic [2:0] f3;
@@ -24,6 +25,7 @@ module datapath (reset,
 	input logic [3:0] alu_op;
 	input logic alu_s1, alu_2;
 	output logic [6:0] opcode;
+	input logic [2:0] mem_ctrl;
 	
 	logic branch_sel;
 	logic [31:0] pc_present
@@ -69,13 +71,15 @@ module datapath (reset,
 				 .b_control(branch_ctrl) //control unit
 				);
 	
-	DataMem maModule (.addrIn(result),
-					  .dataW(data_out),
-					  .dataR(r2),
-					  .memR(mem_rd), //control unit
-					  .memW(mem_wr), //control unit
-					  .clk(clk) 
-					 );
+	MA(.dataR, .dataW, .addr, mem_ctrl, memR, memW, clk)
+	MA maModule (.addr(result),
+				 .dataW(data_out),
+				 .dataR(r2),
+				 .memR(mem_rd), //control unit
+				 .memW(mem_wr), //control unit
+				 .clk(clk),
+				 .mem_ctrl(mem_ctrl)
+				);
 	
 	mux31 wbModule (.a(data_out), 
 					.b(result), 
