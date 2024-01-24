@@ -1,5 +1,5 @@
-# RISCV-Processor
-Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Architecture)
+# Alpha Processor
+Single Stage RISC-V 32-bit Processor
 
 =======
 ## Checklist
@@ -9,7 +9,8 @@ Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Arc
 | [Inst. Fetch](src/IF.sv) | Y | [Y](testbench/tb_IF.sv) | [Link](https://edaplayground.com/x/r3zg) |
 | [Inst. Decode](src/ID.sv) | Y | [Y](testbench/tb_ID.sv) | [Link](https://edaplayground.com/x/Xwvw) |
 | [Inst. Execute](src/IE.sv) | Y | [Y](testbench/tb_IE.sv) | [Link](https://edaplayground.com/x/CnWQ) |
-| [Mem. Access](src/MA.sv) | Y | [N]() | [Link]() |
+| [Mem. Access](src/MA.sv) | Y | [N](testbench/tb_MA.sv) | [Link]() |
+| [Alpha Processor](src/alpha_processor.sv) | Y | [Y](testbench/tb_alpha_processor.sv) | [Link](https://edaplayground.com/x/9PRR) |
 | Individual Modules | | | |
 | [Program Counter](src/pc.sv) | Y | [Y](testbench/tb_pc.sv) | [Link](https://edaplayground.com/x/WcD9) |
 | [Adder](src/adder.sv) | Y | [Y](testbench/tb_adder.sv) | [Link](https://edaplayground.com/x/gt_U) |
@@ -21,8 +22,8 @@ Single Stage RISC-V 32-bit Processor made in RISC-V Lab (UE21EC352A - RISC-V Arc
 | [ALU](src/ALU.sv) | Y | [Y](testbench/tb_ALU.sv) | [Link](https://edaplayground.com/x/UEmr) |
 | [Branch Control](src/branch_control.sv) | Y | [Y](testbench/tb_branch_control.sv) | [Link](https://edaplayground.com/x/AxsV) |
 | [3:1 MUX](src/mux31.sv) | Y | [Y](testbench/tb_mux31.sv) | [Link](https://edaplayground.com/x/naRb) |
-| [Data Memory](src/DataMem.sv) | Y | [Y](testbench/tb_DataMem.sv) | [Link](https://edaplayground.com/x/Nm7W) |
 | [Control Unit](src/controller.sv) | Y | [Y](testbench/tb_controller.sv) | [Link](https://edaplayground.com/x/P9iS) |
 | [Datapath](src/datapath.sv) | Y | [N]() | [Link]() |
-| [Memory Controller](src/mem_controller.sv) | Y | N | [Link]() |
+| [Data Memory](src/DataMem.sv) | Y | [N](testbench/tb_DataMem.sv) | [Link](https://edaplayground.com/x/Nm7W) |
+| [Memory Controller](src/mem_controller.sv) | Y | [N](testbench/tb_mem_controller.sv) | [Link]() |
 
