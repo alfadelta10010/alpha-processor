@@ -26,7 +26,7 @@ module mem_controller(dataRI, dataRO, addrIn, addrOut, dataWI, dataWO, mem_ctrl)
 	/*
 	assign addrOut = addrIn[SIZE-1:0] + MemOffset 
 	*/
-	assign addrOut = addrIn[SIZE-1:0]
+  assign addrOut = addrIn[SIZE-1:0];
 	always_comb
 		case(mem_ctrl)
 			3'b000: begin //LB

@@ -1,4 +1,4 @@
-module InstMem#(parameter XLEN = 5)(pcin, dout);
+module InstMem #(parameter XLEN = 5)(pcin, dout);
 	input logic [31:0] pcin;
 	logic [XLEN - 1 : 0] addr;
 	output logic [31:0] dout;	
@@ -21,3 +21,4 @@ module InstMem#(parameter XLEN = 5)(pcin, dout);
 	assign dout = {mem [addr+3], mem [addr+2], mem [addr+1], mem [addr]};
 endmodule
 	
+

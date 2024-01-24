@@ -1,5 +1,5 @@
 module DataMem(addr, dataW, dataR, memR, memW, clk);
-	parameter SIZE = 12
+	parameter SIZE = 12;
 	output logic [31:0] dataR;
 	input bit clk;
 	input logic [31:0] dataW;
@@ -23,7 +23,7 @@ module DataMem(addr, dataW, dataR, memR, memW, clk);
 				datafile[addr+3] <= dataW[31:24];
 			else
 				datafile[addr+3] <= 8'b0;
-			if(dataW[23:24] != 8'bX)
+      if(dataW[23:16] != 8'bX)
 				datafile[addr+2] <= dataW[23:16];
 			else
 				datafile[addr+3] <= 8'b0;

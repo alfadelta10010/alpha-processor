@@ -13,7 +13,7 @@ module alpha_processor (reset, clk);
 	logic [2:0] mem_ctrl;
 	
 	logic branch_sel;
-	logic [31:0] pc_present
+  logic [31:0] pc_present;
 	logic [31:0] result;
 	logic [31:0] imm;
 	logic [4:0] r1, r2;

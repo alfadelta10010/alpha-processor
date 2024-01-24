@@ -1,4 +1,4 @@
-module IE(r1, r2, Imm, ALUOp, ALUSrc1, ALUSrc2, ExecResult, zero, PCp, b_sel, b_control);
+module IE(r1, r2, Imm, ALUOp, ALUSrc1, ALUSrc2, ExecResult, PCp, b_sel, b_control);
 	input logic [31:0] r1;
 	input logic [31:0] r2;
 	input logic [31:0] Imm;
@@ -6,7 +6,6 @@ module IE(r1, r2, Imm, ALUOp, ALUSrc1, ALUSrc2, ExecResult, zero, PCp, b_sel, b_
 	input logic ALUSrc1;
 	input logic ALUSrc2;
 	output logic [31:0] ExecResult;
-	//output logic [0:0] zero;
 	input logic [31:0] PCp;
 	input logic [2:0] b_control; //from control unit
 	output logic b_sel; // to IF
