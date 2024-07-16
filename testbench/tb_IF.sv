@@ -1,5 +1,5 @@
 // https://edaplayground.com/x/r3zg
-module tb_IF(clk_tb, branch_sel_tb, branch_inp_tb, pc_present_tb, inst_tb);
+module tb_IF(branch_sel_tb, branch_inp_tb, pc_present_tb, inst_tb);
 	logic branch_sel_tb;
 	bit clk_tb;
 	bit reset_tb;
