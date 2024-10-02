@@ -2,17 +2,13 @@ module ALU(d1, d2, result, control);
 	input logic [31:0] d1;
 	input logic [31:0] d2;
 	output logic [31:0] result;
-	logic [31:0] signed d1S, d2S;
 	input logic [3:0] control;
-	
-	always_comb begin
+	always_comb 
+	begin
 		case(control)
 			4'b0000: result = d1 + d2; //ADD
 			4'b0001: result = d1 << d2[4:0]; //SLL
-			4'b0010: begin
-				d1S = d1; d2S = d2;
-				result = (d1S < d2S) ? 32'h00000001 : 32'h00000000; //SLT
-			end
+			4'b0010: result = ($signed(d1) < $signed(d2)) ? 32'h00000001 : 32'h00000000; //SLT
 			4'b0011: result = (d1 < d2) ? 32'h00000001 : 32'h00000000; //SLTU
 			4'b0100: result = d1 ^ d2; //XOR
 			4'b0101: result = d1 >> d2[4:0]; //SRL
