@@ -1,4 +1,0 @@
-Warning (10273): Verilog HDL warning at InstMem.sv(4): extended using "x" or "z" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 4
-Warning (10273): Verilog HDL warning at InstMem.sv(5): extended using "x" or "z" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 5
-Warning (10273): Verilog HDL warning at InstMem.sv(6): extended using "x" or "z" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 6
-Warning (10273): Verilog HDL warning at InstMem.sv(8): extended using "x" or "z" File: /home/alphadelta1803/Desktop/projects/lab_processor/src/InstMem.sv Line: 8
