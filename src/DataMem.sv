@@ -12,11 +12,11 @@ module DataMem(addr, dataW, dataR, memR, memW, clk);
       dataR[7:0] <= datafile[addr];
       dataR[15:8] <= datafile[addr+1];
       dataR[23:16] <= datafile[addr+2];
-			dataR[31:24] <= datafile[addr+3];
+      dataR[31:24] <= datafile[addr+3];
     end
     else
       dataR <= 32'bX;
-	end
+  end
   always @(posedge clk) begin
     if(memW == 1) begin
       if(dataW[31:24] != 8'bX)
@@ -27,7 +27,7 @@ module DataMem(addr, dataW, dataR, memR, memW, clk);
         datafile[addr+2] <= dataW[23:16];
       else
         datafile[addr+3] <= 8'b0;
-			if (dataW[15:8] != 8'bX)
+      if (dataW[15:8] != 8'bX)
         datafile[addr+1] <= dataW[15:8];
       else
         datafile[addr+3] <= 8'b0;
